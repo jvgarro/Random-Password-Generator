@@ -2,6 +2,8 @@ from tkinter import *
 from tkinter import ttk
 import random
 
+from numpy import delete
+
 def main():
     global passForm, root
     root = Tk()
@@ -23,6 +25,7 @@ def main():
     root.mainloop()
 
 def generatePass():
+    passForm.delete(0, END)
     lower = "abcdefghijklmnopqrstuvwxyz"
     upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     numbers = "0123456789"
